@@ -1,7 +1,11 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 
 const app = express();
+
+// Habilitar CORS
+app.use(cors());
 
 // Definir a rota para o proxy
 app.get("/api/get-piadas", async (req, res) => {
