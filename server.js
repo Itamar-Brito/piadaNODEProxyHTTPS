@@ -6,7 +6,7 @@ const app = express();
 // Definir a rota para o proxy
 app.get("/api/get-piadas", async (req, res) => {
     try {
-        const response = await axios.get("https://piada.atwebpages.com/php_action/api/get-piadas.php");
+        const response = await axios.get("http://piada.atwebpages.com/php_action/api/get-piadas.php");
         res.json(response.data);
     } catch (error) {
         console.error("Erro no proxy:", error.message);
